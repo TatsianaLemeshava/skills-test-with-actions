@@ -31,6 +31,7 @@ jobs:
           npm install remark-cli remark-preset-lint-consistent vfile-reporter-json
           npx standard && npx jest
           npx remark --use remark-preset-lint-consistent --report vfile-reporter-json 2> remark-lint-report.json
+
       - uses: actions/upload-artifact@v3
         with:
           name: remark-lint-report
